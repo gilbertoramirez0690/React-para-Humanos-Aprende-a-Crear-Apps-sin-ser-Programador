@@ -1,0 +1,16 @@
+import React from 'react';
+import Button from './Button';
+
+function App() {
+  const handleClick = () => {
+	alert("!boton reutilizable presionado!");
+  };
+
+  return (
+     <div>
+	<h1>Boton reutilizable</h1>
+	<button label="Haz clic aqui" onClick={handleClick} />
+     </div>
+  );
+}
+export default App;

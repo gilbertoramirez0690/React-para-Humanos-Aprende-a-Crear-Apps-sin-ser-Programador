@@ -1,0 +1,9 @@
+function SimpleButton()
+{
+	return (
+	 <div>
+	      <h1>Mi primer boton en React</h1>
+	      <button>Haz cic aqui</button>
+	 </div>
+	);
+}
