@@ -1,0 +1,13 @@
+// App.js
+import React from 'react';
+import CountButton from './CountButton';
+
+
+function App()
+{
+    return (
+    <div>
+      <h1>Varios contadores</h1>
+      <CountButton initialValue={0} increment={1} />
+      <CountButton initialValue={10} increment={5} />
+    </div>
