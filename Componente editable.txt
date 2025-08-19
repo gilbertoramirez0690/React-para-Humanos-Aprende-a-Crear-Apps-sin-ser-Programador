@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+
+export default function App() {
+  const [isEditing, setIsEditing] = useState(false);
+  const [text, setText] = useState('Texto editable');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  };
+
+  const handleBlur = () => {
+    setIsEditing(false);
+  };
+
+  return (
+    <div style={{ fontFamily: 'Arial', padding: 20 }}>
+      <h1>Componente Editable con React + TypeScript + Vite</h1>
+
+      {isEditing ? (
+        <input
+          type="text"
+          value={text}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          autoFocus
+          style={{ fontSize: 18, padding: 4 }}
+        />
+      ) : (
+        <p
+          onClick={() => setIsEditing(true)}
+          style={{ cursor: 'pointer', fontSize: 18, userSelect: 'none' }}
+        >
+          {text}
+        </p>
+      )}
+    </div>
+  );
+}
