@@ -1,0 +1,16 @@
+import React, { useState } from 'react';
+
+export default function EjemploEstado() {
+  const [texto, setTexto] = useState('Texto original');
+
+  const cambiarTexto = () => {
+    setTexto('Texto cambiado');
+  };
+
+  return (
+    <div>
+      <p>{texto}</p>
+      <button onClick={cambiarTexto}>Cambiar Texto</button>
+    </div>
+  );
+}
