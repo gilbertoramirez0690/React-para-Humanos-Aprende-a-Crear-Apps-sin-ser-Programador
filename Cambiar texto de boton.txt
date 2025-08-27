@@ -1,0 +1,36 @@
+import { useState } from 'react';
+import './App.css';
+
+function App() {
+  // Estado para controlar el texto del botón
+  const [buttonText, setButtonText] = useState("Haz clic aquí");
+  
+  // Función para cambiar el texto cuando se hace clic
+  const handleClick = () => {
+    setButtonText("¡Texto cambiado!");
+  };
+
+  return (
+    <div className="app">
+      <h1>Cambiar Texto de Botón en React</h1>
+      <p>Haz clic en el botón para cambiar su texto:</p>
+      
+      {/* Botón con texto dinámico */}
+      <button className="my-button" onClick={handleClick}>
+        {buttonText}
+      </button>
+      
+      <div className="explanation">
+        <h2>¿Cómo funciona?</h2>
+        <ol>
+          <li>Usamos <code>useState</code> para crear un estado que almacena el texto del botón</li>
+          <li>El botón muestra el valor actual del estado: <code>{buttonText}</code></li>
+          <li>Al hacer clic, se ejecuta <code>handleClick</code> que actualiza el estado</li>
+          <li>React detecta el cambio y vuelve a renderizar el componente con el nuevo texto</li>
+        </ol>
+      </div>
+    </div>
+  );
+}
+
+export default App;
