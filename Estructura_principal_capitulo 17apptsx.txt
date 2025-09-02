@@ -1,0 +1,68 @@
+import React from 'react';
+import './App.css';
+import BasicCard from './components/BasicCard';
+
+function App() {
+  return (
+    <div className="app">
+      <div className="container">
+        <h1 className="main-title">Tutorial de Estilos CSS</h1>
+        
+        <div className="tutorial-section">
+          <h2 className="section-title">1. Tarjeta Básica (sin estilos)</h2>
+          <div className="card-container">
+            <BasicCard 
+              title="Tarjeta Simple" 
+              description="Esta es una tarjeta básica sin estilos aplicados. Solo estructura HTML."
+            />
+          </div>
+        </div>
+
+        <div className="tutorial-section">
+          <h2 className="section-title">2. Con Estilos Básicos</h2>
+          <div className="card-container">
+            <div className="styled-card">
+              <h2>Tarjeta con Estilos</h2>
+              <p>Ahora tiene colores, espaciado y tipografía mejorada.</p>
+              <button>Leer más</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="tutorial-section">
+          <h2 className="section-title">3. Con Efectos y Animaciones</h2>
+          <div className="card-container">
+            <div className="animated-card">
+              <h2>Tarjeta Animada</h2>
+              <p>Incluye sombras, transiciones y efectos hover.</p>
+              <button>Leer más</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="tutorial-section">
+          <h2 className="section-title">4. Diseño Avanzado</h2>
+          <div className="card-container">
+            <div className="advanced-card">
+              <div className="card-header">
+                <div className="avatar"></div>
+                <div className="user-info">
+                  <h3>Usuario Ejemplo</h3>
+                  <span>Desarrollador</span>
+                </div>
+              </div>
+              <h2>Tarjeta Avanzada</h2>
+              <p>Diseño completo con múltiples elementos y layout complejo.</p>
+              <div className="card-actions">
+                <button className="primary-btn">Seguir</button>
+                <button className="secondary-btn">Mensaje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

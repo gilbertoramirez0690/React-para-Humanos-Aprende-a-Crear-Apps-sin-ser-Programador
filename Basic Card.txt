@@ -1,0 +1,18 @@
+import React from 'react';
+
+interface BasicCardProps {
+  title: string;
+  description: string;
+}
+
+const BasicCard: React.FC<BasicCardProps> = ({ title, description }) => {
+  return (
+    <div className="basic-card">
+      <h2 className="card-title">{title}</h2>
+      <p className="card-description">{description}</p>
+      <button className="card-button">Leer más</button>
+    </div>
+  );
+};
+
+export default BasicCard;
